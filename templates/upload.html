@@ -1,0 +1,15 @@
+{% extends '03base.html' %}
+{% block title %} upload paeg {% end %}
+
+{% block body %}
+<form action="/upload" enctype="multipart/form-data" method="post">
+      {% module xsrf_form_html()%}
+    图片: <input type="file" name="picture" multiple>
+    <br>
+    <br>
+    <br>
+
+    <input type="submit">
+    
+</form>
+{% end %}
